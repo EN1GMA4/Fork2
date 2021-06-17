@@ -1,0 +1,29 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>net5.0</TargetFramework>
+        <StartupObject>Fork2Backend.Program</StartupObject>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <Folder Include="Logic" />
+      <Folder Include="Persistence" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="log4net" Version="2.0.12" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Fork2Model\Fork2Model.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="Config\log4net.config" />
+      <Content Include="Config\log4net.config">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </Content>
+    </ItemGroup>
+
+</Project>
