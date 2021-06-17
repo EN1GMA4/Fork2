@@ -13,15 +13,8 @@ namespace Fork2Backend.Services
      */
     public class EntityService : AbstractService
     {
-        private RequestContext _context;
-        
-        public EntityService() : base(nameof(EntityService))
-        {
-        }
-        
         protected override void HandlePackage(RequestContext context, AbstractPackage package)
         {
-            _context = context;
             switch (package.Command)
             {
                 case Command.START:

@@ -5,7 +5,7 @@ namespace Fork2Backend.Services
 {
     public abstract class AbstractService : AbstractEntity
     {
-        protected AbstractService(string name) : base(name)
+        protected AbstractService()
         {
             ServiceManager.Instance.PackageReceivedEvent += HandlePackage;
             Log.Debug("Service initialized");

@@ -1,9 +1,10 @@
-﻿namespace Fork2Backend.Managers
+﻿using log4net;
+
+namespace Fork2Backend.Managers
 {
     public abstract class AbstractManager : AbstractEntity
     {
-        protected AbstractManager(string name) : base(name)
-        {
-        }
+        private ILog _log;
+        protected ILog Log => _log ??= LogManager.GetLogger(GetType().Name);
     }
 }

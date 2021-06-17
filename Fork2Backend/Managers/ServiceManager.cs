@@ -14,10 +14,6 @@ namespace Fork2Backend.Managers
         public delegate void PackageReceivedHandler(RequestContext context, AbstractPackage package);
         public event PackageReceivedHandler PackageReceivedEvent;
 
-        private ServiceManager() : base(nameof(ServiceManager))
-        {
-        }
-
         public void AddService(AbstractService service)
         {
             runningServices.Add(service);

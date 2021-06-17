@@ -4,16 +4,18 @@ using System.Reflection;
 using System.Text;
 using log4net;
 using log4net.Config;
+using log4net.Repository.Hierarchy;
 
 namespace Fork2Backend
 {
     public abstract class AbstractEntity
     {
-        protected readonly ILog Log;
+        private ILog _log;
+        protected ILog Log => _log ??= LogManager.GetLogger(GetType().Name);
 
-        protected AbstractEntity(string name)
+
+        protected AbstractEntity()
         {
-            Log = LogManager.GetLogger(name);
             Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
             XmlConfigurator.Configure(new FileInfo("Config/log4net.config"));
         }
