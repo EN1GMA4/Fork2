@@ -1,4 +1,4 @@
-﻿namespace Fork2Model.Packages.Entity
+﻿namespace Fork2Common.Model.Packages.Entity
 {
     public class AbstractEntityPackage : AbstractPackage
     {

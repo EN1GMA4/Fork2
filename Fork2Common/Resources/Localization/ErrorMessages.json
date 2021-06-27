@@ -1,0 +1,10 @@
+{
+    "UNKNOWN_ERROR": {
+        "ENGLISH": "An unexpected Error occured!",
+        "GERMAN": "Ein unerwarteter Fehler ist aufgetreten!"
+    },
+    "MISSING_PERMISSION":{
+        "ENGLISH": "You don't have the permissions to do this!",
+        "GERMAN": "Du besitzt nicht die benötigten Berechtigungen!"
+    }
+}

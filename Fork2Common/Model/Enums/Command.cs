@@ -1,6 +1,4 @@
-﻿using System.Threading;
-
-namespace Fork2Model.Enums
+﻿namespace Fork2Common.Model.Enums
 {
     public enum Command
     {

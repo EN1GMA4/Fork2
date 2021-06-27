@@ -1,6 +1,6 @@
-﻿using Fork2Model.Enums;
+﻿using Fork2Common.Model.Enums;
 
-namespace Fork2Model.Packages
+namespace Fork2Common.Model.Packages
 {
     public abstract class AbstractPackage
     {

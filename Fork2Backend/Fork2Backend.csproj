@@ -16,6 +16,7 @@
     </ItemGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\Fork2Common\Fork2Common.csproj" />
       <ProjectReference Include="..\Fork2Model\Fork2Model.csproj" />
     </ItemGroup>
 

@@ -28,7 +28,7 @@ namespace Fork2Backend.Services
         
         #region Handlers
         
-        private void StartEntity(StartEntityPackage package)
+        private async void StartEntity(StartEntityPackage package)
         {
             if (package == null)
             {
