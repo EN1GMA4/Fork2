@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
+using Fork2Backend.Model;
 using Fork2Backend.Services;
-using Fork2Model.Packages;
+using Fork2Common.Model.Packages;
 
 namespace Fork2Backend.Managers
 {

@@ -5,12 +5,11 @@ namespace Fork2Common.Model.Packages
     public abstract class AbstractPackage
     {
         public Command Command { get; set; }
-        public string Type { get; set; }
+        public string Type => GetType().Name;
         public string Message { get; set; }
 
-        protected AbstractPackage(string type)
+        protected AbstractPackage()
         {
-            Type = type;
         }
     }
 }

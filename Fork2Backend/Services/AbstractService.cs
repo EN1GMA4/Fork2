@@ -1,5 +1,6 @@
 ﻿using Fork2Backend.Managers;
-using Fork2Model.Packages;
+using Fork2Backend.Model;
+using Fork2Common.Model.Packages;
 
 namespace Fork2Backend.Services
 {

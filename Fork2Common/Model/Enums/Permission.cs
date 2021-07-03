@@ -1,7 +1,7 @@
 ﻿namespace Fork2Common.Model.Enums
 {
-    public enum Role
+    public enum Permission
     {
-        ADMIN
+        ADMIN, 
     }
 }

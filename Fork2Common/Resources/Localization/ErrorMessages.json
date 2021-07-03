@@ -6,5 +6,13 @@
     "MISSING_PERMISSION":{
         "ENGLISH": "You don't have the permissions to do this!",
         "GERMAN": "Du besitzt nicht die benötigten Berechtigungen!"
+    },
+    "MISSING_TOKEN": {
+        "ENGLISH": "No token was provided! Every request requires a token!",
+        "GERMAN": "Token fehlt! Jede Anfrage benötigt einen Token!"
+    },
+    "UNKNOWN_PACKAGE": {
+        "ENGLISH": "Unknown package received!",
+        "GERMAN": "Unbekanntes Paket erhalten!"
     }
 }

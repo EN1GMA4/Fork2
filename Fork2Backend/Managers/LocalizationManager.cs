@@ -17,5 +17,9 @@ namespace Fork2Backend.Managers
         }
         
         public Localization Localization { get; }
+
+        //TODO make configurable
+        public Language Language => Language.ENGLISH;
+        
     }
 }

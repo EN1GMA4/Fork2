@@ -5,6 +5,10 @@
         // Unexpected Error happened
         UNKNOWN_ERROR,
         // User is missing required permissions
-        MISSING_PERMISSION
+        MISSING_PERMISSION,
+        // No token was provided
+        MISSING_TOKEN,
+        // Unknown package received
+        UNKNOWN_PACKAGE,
     }
 }

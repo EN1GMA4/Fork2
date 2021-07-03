@@ -1,10 +1,7 @@
-﻿using System;
-using System.Runtime.CompilerServices;
-using Fork2Backend.Managers;
-using Fork2Model.Enums;
-using Fork2Model.Packages;
-using Fork2Model.Packages.Entity;
-using log4net;
+﻿using Fork2Backend.Model;
+using Fork2Common.Model.Enums;
+using Fork2Common.Model.Packages;
+using Fork2Common.Model.Packages.Entity;
 
 namespace Fork2Backend.Services
 {
