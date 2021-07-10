@@ -6,7 +6,6 @@ namespace Fork2Common.Model.Packages
     {
         public Command Command { get; set; }
         public string Type => GetType().Name;
-        public string Message { get; set; }
 
         protected AbstractPackage()
         {

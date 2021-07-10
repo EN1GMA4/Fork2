@@ -20,6 +20,12 @@ namespace Fork2Backend.Managers
             runningServices.Add(service);
         }
 
+        /// <summary>
+        /// Invokes all the Services and calls their "handle" method
+        /// This expects all packages to be well formed. If they are not there is a high chance for failure ;)
+        /// </summary>
+        /// <param name="context"></param>
+        /// <param name="package"></param>
         public void InvokeServices(RequestContext context, AbstractPackage package)
         {
             PackageReceivedEvent?.Invoke(context, package);

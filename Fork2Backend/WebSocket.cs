@@ -8,12 +8,13 @@ using Fork2Backend.Helpers.ExtensionMethods;
 using Fork2Backend.Managers;
 using Fork2Backend.Model;
 using Fork2Common.Model.Exceptions;
+using Fork2Common.Model.Packages;
 using Fork2Common.Parsers;
 using Fork2Model.Enums;
 
 namespace Fork2Backend
 {
-    public class WebSocket : AbstractEntity, IDisposable
+    public class WebSocket : AbstractForkEntity, IDisposable
     {
         private WebSocketServer server;
         private ConnectionCollection connections = new();
@@ -56,6 +57,16 @@ namespace Fork2Backend
             server?.Dispose();
         }
 
+        public void SendPackage(Client receiver, AbstractPackage package)
+        {
+            
+        }
+
+        public void BroadcastPackage(AbstractPackage package)
+        {
+            
+        }
+
         /// <summary>
         /// WebSocket Opened
         /// </summary>
@@ -93,8 +104,9 @@ namespace Fork2Backend
             Task.Run(() =>
             {
                 Log.Debug("Handling message from: "+socket.ConnectionInfo.ClientIpAddress+" with message: "+message);
+
                 // Create RequestContext
-                RequestContext requestContext = AuthenticationManager.Instance.CreateRequestContext(GetToken(socket), connections.Get(socket));
+                RequestContext requestContext = AuthenticationManager.Instance.CreateRequestContext(connections.Get(socket));
                 try
                 {
                     HandleMessageInternal(requestContext, message);
@@ -113,8 +125,16 @@ namespace Fork2Backend
             });
         }
 
-        private async void HandleMessageInternal(RequestContext requestContext, string message)
+        private void HandleMessageInternal(RequestContext requestContext, string message)
         {
+            if (!requestContext.Client.Authenticated)
+            {
+                Log.Debug("Client "+requestContext.Client+" is not authenticated yet. Expecting Login Package!");
+            }
+            else
+            {
+                Log.Debug("Client "+requestContext.Client+ " is authenticated and has following permissions: "+requestContext.Client.Permissions.ToJson());
+            }
             ServiceManager.Instance.InvokeServices(requestContext, PackageParser.ParsePackage(message));
         }
 

@@ -14,5 +14,9 @@
     "UNKNOWN_PACKAGE": {
         "ENGLISH": "Unknown package received!",
         "GERMAN": "Unbekanntes Paket erhalten!"
+    },
+    "INVALID_TOKEN": {
+        "ENGLISH": "Provided Token is not valid!",
+        "GERMAN": "Eingegebener Token ist nicht gültig!"
     }
 }

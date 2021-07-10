@@ -10,5 +10,7 @@
         MISSING_TOKEN,
         // Unknown package received
         UNKNOWN_PACKAGE,
+        // Invalid Token provided
+        INVALID_TOKEN,
     }
 }

@@ -2,7 +2,9 @@
 {
     public enum Command
     {
-        START,
-        STOP,
+        LOGIN,
+        START_ENTITY,
+        STOP_ENTITY,
+        UPDATE_ENTITY,
     }
 }
